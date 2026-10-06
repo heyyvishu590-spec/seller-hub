@@ -1,66 +1,1191 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SELLERS HUB | Marketplace Growth & Management</title>
-    <meta
-      name="description"
-      content="SELLERS HUB helps Indian brands manage, optimize, and scale across Flipkart, Myntra, Shopsy, and Meesho with end-to-end catalog, onboarding, and growth operations."
-    />
-    <meta property="og:title" content="SELLERS HUB | Marketplace Growth & Management" />
-    <meta
-      property="og:description"
-      content="SELLERS HUB helps Indian brands manage, optimize, and scale across Flipkart, Myntra, Shopsy, and Meesho with end-to-end catalog, onboarding, and growth operations."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="SELLERS HUB" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SELLERS HUB | Marketplace Growth & Management" />
-    <meta
-      name="twitter:description"
-      content="SELLERS HUB helps brands manage, optimize and grow across Flipkart, Myntra, Shopsy and Meesho."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "SELLERS HUB",
-      "description": "Marketplace management, catalog optimization, brand approval and account relaunch for Flipkart, Myntra, Shopsy, and Meesho.",
-      "telephone": "+916203836621",
-      "areaServed": "IN",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Myntra Account Management",
-          "price": "7000",
-          "priceCurrency": "INR"
-        },
-        {
-          "@type": "Offer",
-          "name": "Flipkart + Shopsy Management",
-          "price": "5000",
-          "priceCurrency": "INR"
-        },
-        {
-          "@type": "Offer",
-          "name": "Meesho Management",
-          "price": "3000",
-          "priceCurrency": "INR"
-        }
-      ]
-    }
-    </script>
-  </head>
-  <body class="bg-[#f6f7f5] text-[#111] antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SELLERS HUB | Marketplace Growth</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,Arial,sans-serif;
+  background:#f5f7f6;
+  color:#111;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(245,247,246,.92);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #e1e4e2;
+}
+
+.nav{
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+
+.logo span{
+  color:#0da99b;
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+.navlinks a{
+  color:#555;
+  font-size:14px;
+}
+
+.navlinks a:hover{
+  color:#0da99b;
+}
+
+.navbtn{
+  background:#111;
+  color:white!important;
+  padding:11px 18px;
+  border-radius:30px;
+}
+
+/* HERO */
+
+.hero{
+  padding:100px 0;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.eyebrow{
+  color:#0da99b;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  display:inline-block;
+  margin-bottom:20px;
+}
+
+h1{
+  font-size:clamp(48px,7vw,78px);
+  line-height:.95;
+  letter-spacing:-4px;
+  margin-bottom:25px;
+}
+
+h1 span{
+  color:#0da99b;
+}
+
+.hero-text{
+  color:#666;
+  font-size:18px;
+  max-width:580px;
+  margin-bottom:30px;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:10px;
+  font-weight:700;
+}
+
+.dark{
+  background:#111;
+  color:#fff;
+}
+
+.light{
+  background:#fff;
+  border:1px solid #ddd;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* DASHBOARD */
+
+.dashboard{
+  background:#101313;
+  color:#fff;
+  padding:28px;
+  border-radius:28px;
+  box-shadow:0 30px 70px rgba(0,0,0,.15);
+}
+
+.dashboard-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:30px;
+}
+
+.small{
+  color:#888;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.total{
+  font-size:38px;
+  font-weight:900;
+  margin-top:5px;
+}
+
+.green{
+  color:#0dd1be;
+  font-size:12px;
+}
+
+.chart{
+  height:145px;
+  display:flex;
+  align-items:flex-end;
+  gap:10px;
+  border-bottom:1px solid #333;
+  margin-bottom:25px;
+}
+
+.bar{
+  flex:1;
+  background:#0da99b;
+  border-radius:5px 5px 0 0;
+}
+
+.bar:nth-child(1){height:35%}
+.bar:nth-child(2){height:45%}
+.bar:nth-child(3){height:52%}
+.bar:nth-child(4){height:65%}
+.bar:nth-child(5){height:70%}
+.bar:nth-child(6){height:85%}
+.bar:nth-child(7){height:100%}
+
+.market-row{
+  display:flex;
+  justify-content:space-between;
+  padding:13px 15px;
+  background:#191d1d;
+  border-radius:9px;
+  margin-top:9px;
+  font-size:14px;
+}
+
+.market-row strong{
+  color:#0dd1be;
+}
+
+/* TRUST */
+
+.trust{
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  padding:30px 0;
+}
+
+.trust-inner{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+  color:#777;
+  font-weight:800;
+}
+
+/* SECTIONS */
+
+section{
+  padding:100px 0;
+}
+
+.section-head{
+  max-width:700px;
+  margin-bottom:50px;
+}
+
+.section-head h2{
+  font-size:clamp(36px,5vw,58px);
+  line-height:1;
+  letter-spacing:-2px;
+  margin-bottom:18px;
+}
+
+.section-head p{
+  color:#666;
+  font-size:17px;
+}
+
+/* SERVICES */
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border:1px solid #e2e5e3;
+  border-radius:20px;
+  padding:30px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#0da99b;
+  box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.number{
+  color:#0da99b;
+  font-weight:900;
+  margin-bottom:40px;
+}
+
+.card h3{
+  font-size:21px;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#777;
+  font-size:14px;
+}
+
+/* MARKETPLACES */
+
+.marketplaces{
+  background:#111;
+  color:#fff;
+}
+
+.market-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.market{
+  border:1px solid #303535;
+  border-radius:20px;
+  padding:25px;
+  min-height:190px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:.3s;
+}
+
+.market:hover{
+  border-color:#0da99b;
+  transform:translateY(-5px);
+}
+
+.market h3{
+  font-size:28px;
+}
+
+.market small{
+  color:#777;
+}
+
+/* SPECIAL */
+
+.special-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.special{
+  background:#fff;
+  border:1px solid #e1e4e2;
+  border-radius:22px;
+  padding:35px;
+}
+
+.special h3{
+  font-size:27px;
+  margin:10px 0;
+}
+
+.special p{
+  color:#666;
+}
+
+.special ul{
+  padding-left:20px;
+  margin-top:20px;
+  color:#555;
+}
+
+.special li{
+  margin:7px 0;
+}
+
+/* PRICING */
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.price-card{
+  background:white;
+  border:1px solid #e1e4e2;
+  border-radius:20px;
+  padding:30px;
+}
+
+.price-card h3{
+  margin-bottom:20px;
+}
+
+.price{
+  font-size:36px;
+  font-weight:900;
+  margin-bottom:20px;
+}
+
+.price small{
+  font-size:12px;
+  color:#777;
+  font-weight:400;
+}
+
+.price-card ul{
+  list-style:none;
+  color:#666;
+  font-size:14px;
+  margin-bottom:25px;
+}
+
+.price-card li{
+  margin:8px 0;
+}
+
+/* PROCESS */
+
+.process{
+  background:#e8f5f3;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.step{
+  border-top:2px solid #111;
+  padding-top:20px;
+}
+
+.step span{
+  color:#0da99b;
+  font-weight:900;
+}
+
+.step h3{
+  margin-top:18px;
+}
+
+/* CTA */
+
+.cta{
+  padding:100px 0;
+}
+
+.cta-box{
+  background:#101313;
+  color:white;
+  text-align:center;
+  padding:75px 30px;
+  border-radius:30px;
+}
+
+.cta-box h2{
+  font-size:clamp(38px,5vw,60px);
+  line-height:1;
+  margin-bottom:20px;
+}
+
+.cta-box p{
+  color:#aaa;
+  max-width:550px;
+  margin:0 auto 30px;
+}
+
+.whatsapp{
+  background:#0da99b;
+  color:white;
+}
+
+/* FOOTER */
+
+footer{
+  background:#0c0e0e;
+  color:#fff;
+  padding:50px 0;
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:25px;
+}
+
+.footer p{
+  color:#777;
+  margin-top:8px;
+}
+
+.copy{
+  border-top:1px solid #292d2d;
+  margin-top:40px;
+  padding-top:20px;
+  color:#666;
+  font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .navlinks{
+    display:none;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .services{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .market-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .pricing{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .steps{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding:70px 0;
+  }
+
+  section{
+    padding:70px 0;
+  }
+
+  .services,
+  .market-grid,
+  .pricing,
+  .steps,
+  .special-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .dashboard{
+    padding:20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      SELLERS <span>HUB</span>
+    </a>
+
+    <nav class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#marketplaces">Marketplaces</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+
+      <a
+        class="navbtn"
+        href="https://wa.me/916203836621?text=Hello%20SELLERS%20HUB"
+        target="_blank">
+        Get Started
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <span class="eyebrow">
+        MARKETPLACE GROWTH & MANAGEMENT
+      </span>
+
+      <h1>
+        Build.<br>
+        Manage.<br>
+        <span>Grow.</span>
+      </h1>
+
+      <p class="hero-text">
+        SELLERS HUB helps brands manage, optimize and grow
+        their business across India's leading marketplaces.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn dark"
+          href="https://wa.me/916203836621?text=Hello%20SELLERS%20HUB,%20I%20want%20to%20discuss%20my%20marketplace%20business."
+          target="_blank">
+          Get Started
+        </a>
+
+        <a class="btn light" href="#services">
+          Explore Services
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DASHBOARD -->
+
+    <div class="dashboard">
+
+      <div class="dashboard-top">
+
+        <div>
+          <div class="small">Marketplace Overview</div>
+          <div class="total">₹15.6L</div>
+        </div>
+
+        <div class="green">
+          ● Growth Tracking
+        </div>
+
+      </div>
+
+      <div class="chart">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <div class="market-row">
+        <span>Myntra</span>
+        <strong>₹4.8L</strong>
+      </div>
+
+      <div class="market-row">
+        <span>Flipkart</span>
+        <strong>₹4.2L</strong>
+      </div>
+
+      <div class="market-row">
+        <span>Meesho</span>
+        <strong>₹4.5L</strong>
+      </div>
+
+      <div class="market-row">
+        <span>Shopsy</span>
+        <strong>₹2.1L</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MARKETPLACE STRIP -->
+
+<div class="trust">
+
+  <div class="container trust-inner">
+
+    <span>MYNTRA</span>
+    <span>FLIPKART</span>
+    <span>SHOPSY</span>
+    <span>MEESHO</span>
+
+  </div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">OUR SERVICES</span>
+
+      <h2>
+        Everything you need to manage your marketplace.
+      </h2>
+
+      <p>
+        From account setup and approvals to catalog management
+        and growth planning.
+      </p>
+
+    </div>
+
+
+    <div class="services">
+
+      <div class="card">
+        <div class="number">01</div>
+        <h3>Account Management</h3>
+        <p>
+          Complete marketplace account handling and
+          day-to-day operational support.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">02</div>
+        <h3>Account Relaunch</h3>
+        <p>
+          Support for inactive, paused or underperforming
+          seller accounts.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">03</div>
+        <h3>Brand Approval</h3>
+        <p>
+          Assistance with marketplace brand approval,
+          documentation and submission requirements.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">04</div>
+        <h3>Brand Authorization</h3>
+        <p>
+          Brand authorization documentation and
+          marketplace requirement support.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">05</div>
+        <h3>Catalog Management</h3>
+        <p>
+          Product listing, catalog creation and
+          catalog optimization.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">06</div>
+        <h3>Seller Onboarding</h3>
+        <p>
+          Get your seller account and products ready
+          for marketplace launch.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">07</div>
+        <h3>Listing Optimization</h3>
+        <p>
+          Improve titles, descriptions, attributes and
+          overall catalog quality.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">08</div>
+        <h3>Growth Planning</h3>
+        <p>
+          Identify opportunities to improve visibility,
+          sales and marketplace performance.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">09</div>
+        <h3>Performance Insights</h3>
+        <p>
+          Track performance and identify opportunities
+          using marketplace data.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MARKETPLACES -->
+
+<section class="marketplaces" id="marketplaces">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">MARKETPLACES</span>
+
+      <h2>
+        One partner.<br>
+        Multiple marketplaces.
+      </h2>
+
+      <p>
+        Manage your marketplace business from one place.
+      </p>
+
+    </div>
+
+    <div class="market-grid">
+
+      <a
+        class="market"
+        href="https://www.myntra.com"
+        target="_blank">
+
+        <small>MARKETPLACE</small>
+        <h3>MYNTRA</h3>
+        <small>Visit marketplace →</small>
+
+      </a>
+
+      <a
+        class="market"
+        href="https://www.flipkart.com"
+        target="_blank">
+
+        <small>MARKETPLACE</small>
+        <h3>FLIPKART</h3>
+        <small>Visit marketplace →</small>
+
+      </a>
+
+      <a
+        class="market"
+        href="https://www.shopsy.in"
+        target="_blank">
+
+        <small>MARKETPLACE</small>
+        <h3>SHOPSY</h3>
+        <small>Visit marketplace →</small>
+
+      </a>
+
+      <a
+        class="market"
+        href="https://www.meesho.com"
+        target="_blank">
+
+        <small>MARKETPLACE</small>
+        <h3>MEESHO</h3>
+        <small>Visit marketplace →</small>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SPECIALIZED SERVICES -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">SPECIALIZED SUPPORT</span>
+
+      <h2>
+        Need help fixing or restarting your account?
+      </h2>
+
+    </div>
+
+    <div class="special-grid">
+
+      <div class="special">
+
+        <span class="eyebrow">ACCOUNT</span>
+
+        <h3>Account Relaunch</h3>
+
+        <p>
+          Structured support for sellers who want to
+          restart or improve an existing marketplace account.
+        </p>
+
+        <ul>
+          <li>Account review</li>
+          <li>Catalog review</li>
+          <li>Listing improvement</li>
+          <li>Growth planning</li>
+        </ul>
+
+      </div>
+
+
+      <div class="special">
+
+        <span class="eyebrow">BRAND</span>
+
+        <h3>Flipkart Brand Approval</h3>
+
+        <p>
+          Assistance with brand approval requirements,
+          documentation and submission processes.
+        </p>
+
+        <ul>
+          <li>Brand documentation support</li>
+          <li>Authorization letter guidance</li>
+          <li>Submission assistance</li>
+          <li>Requirement review</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section id="pricing">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">PRICING</span>
+
+      <h2>
+        Simple plans for marketplace sellers.
+      </h2>
+
+    </div>
+
+    <div class="pricing">
+
+      <div class="price-card">
+
+        <h3>Myntra</h3>
+
+        <div class="price">
+          ₹7,000
+          <small>/ month</small>
+        </div>
+
+        <ul>
+          <li>✓ Account Management</li>
+          <li>✓ Catalog Management</li>
+          <li>✓ Listing Support</li>
+          <li>✓ Growth Support</li>
+        </ul>
+
+        <a
+          class="btn dark"
+          href="https://wa.me/916203836621?text=Hello%20SELLERS%20HUB,%20I%20am%20interested%20in%20Myntra%20management."
+          target="_blank">
+          Get Started
+        </a>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <h3>Flipkart + Shopsy</h3>
+
+        <div class="price">
+          ₹5,000
+          <small>/ month</small>
+        </div>
+
+        <ul>
+          <li>✓ Account Management</li>
+          <li>✓ Catalog Management</li>
+          <li>✓ Listing Support</li>
+          <li>✓ Growth Support</li>
+        </ul>
+
+        <a
+          class="btn dark"
+          href="https://wa.me/916203836621?text=Hello%20SELLERS%20HUB,%20I%20am%20interested%20in%20Flipkart%20and%20Shopsy%20management."
+          target="_blank">
+          Get Started
+        </a>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <h3>Meesho</h3>
+
+        <div class="price">
+          ₹3,000
+          <small>/ month</small>
+        </div>
+
+        <ul>
+          <li>✓ Account Management</li>
+          <li>✓ Catalog Management</li>
+          <li>✓ Listing Support</li>
+          <li>✓ Growth Support</li>
+        </ul>
+
+        <a
+          class="btn dark"
+          href="https://wa.me/916203836621?text=Hello%20SELLERS%20HUB,%20I%20am%20interested%20in%20Meesho%20management."
+          target="_blank">
+          Get Started
+        </a>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <h3>Multi-Marketplace</h3>
+
+        <div class="price">
+          Custom
+        </div>
+
+        <ul>
+          <li>✓ Multiple marketplaces</li>
+          <li>✓ Account management</li>
+          <li>✓ Catalog management</li>
+          <li>✓ Growth strategy</li>
+        </ul>
+
+        <a
+          class="btn dark"
+          href="https://wa.me/916203836621?text=Hello%20SELLERS%20HUB,%20I%20need%20a%20custom%20multi-marketplace%20plan."
+          target="_blank">
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">PROCESS</span>
+
+      <h2>
+        Simple process.<br>
+        Better execution.
+      </h2>
+
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <span>01</span>
+        <h3>Connect</h3>
+        <p>Tell us about your marketplace business.</p>
+      </div>
+
+      <div class="step">
+        <span>02</span>
+        <h3>Audit</h3>
+        <p>We review your account and catalogs.</p>
+      </div>
+
+      <div class="step">
+        <span>03</span>
+        <h3>Optimize</h3>
+        <p>We improve the key areas affecting performance.</p>
+      </div>
+
+      <div class="step">
+        <span>04</span>
+        <h3>Grow</h3>
+        <p>We work toward stronger marketplace performance.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+
+  <div class="container">
+
+    <div class="cta-box">
+
+      <h2>
+        Ready to grow your marketplace business?
+      </h2>
+
+      <p>
+        Tell us about your business and marketplace goals.
+        Let's discuss the next step.
+      </p>
+
+      <a
+        class="btn whatsapp"
+        href="https://wa.me/916203836621?text=Hello%20SELLERS%20HUB,%20I%20want%20to%20discuss%20my%20marketplace%20business."
+        target="_blank">
+        Chat on WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer">
+
+      <div>
+        <div class="logo">
+          SELLERS <span>HUB</span>
+        </div>
+
+        <p>
+          Marketplace Growth & Management
+        </p>
+      </div>
+
+      <p>
+        Myntra · Flipkart · Shopsy · Meesho
+      </p>
+
+    </div>
+
+    <div class="copy">
+      © 2026 SELLERS HUB. All rights reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
